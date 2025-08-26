@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Platform Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <main class="auth-container">
+        <div class="auth-image" role="img" aria-label="Authentication background">
+            <img src="bgimg.png" alt="Login background" loading="lazy">
+        </div>
+        
+        <section class="auth-content">
+            <div class="auth-form-wrapper">
+                <header class="auth-header">
+                    <h1>Create Account</h1>
+                    <p class="auth-subtitle">Sign up for a new account</p>
+                </header>
+
+                <!-- Error/Success Messages -->
+                <div id="auth-messages" class="auth-messages" role="alert" aria-live="polite" aria-atomic="true"></div>
+
+                <form id="signup-form" class="auth-form" novalidate>
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            Email Address
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="form-input"
+                            required
+                            autocomplete="email"
+                            aria-describedby="email-error"
+                            placeholder="Enter your email"
+                        >
+                        <div id="email-error" class="field-error" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="form-input"
+                                required
+                                autocomplete="new-password"
+                                aria-describedby="password-error"
+                                placeholder="Enter your password"
+                                minlength="6"
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Toggle password visibility"
+                                tabindex="0"
+                            >
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div id="password-error" class="field-error" role="alert"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm-password" class="form-label">
+                            <i class="fas fa-lock" aria-hidden="true"></i>
+                            Confirm Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                name="confirm-password"
+                                class="form-input"
+                                required
+                                autocomplete="new-password"
+                                aria-describedby="confirm-password-error"
+                                placeholder="Confirm your password"
+                                minlength="6"
+                            >
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                aria-label="Toggle password visibility"
+                                tabindex="0"
+                            >
+                                <i class="fas fa-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div id="confirm-password-error" class="field-error" role="alert"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="signup-btn">
+                        <span class="btn-text">Create Account</span>
+                        <i class="fas fa-spinner fa-spin btn-spinner" aria-hidden="true"></i>
+                    </button>
+
+                    <div class="divider">
+                        <span>or</span>
+                    </div>
+
+                    <button type="button" class="btn btn-google" id="google-signup-btn">
+                        <i class="fab fa-google" aria-hidden="true"></i>
+                        Sign up with Google
+                    </button>
+
+                    <div class="auth-switch">
+                        <p>Already have an account? <a href="index.html" class="auth-link">Sign in</a></p>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="signup.js" type="module"></script>
+</body>
+</html>
