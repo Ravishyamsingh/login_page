@@ -1,3 +1,6 @@
+
+
+
 /**
  * Enhanced Signup Component
  * A secure, accessible, and configurable signup component
