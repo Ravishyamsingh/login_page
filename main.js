@@ -2,7 +2,6 @@
  * Enhanced Login Component
  * A secure, accessible, and configurable login component
  */
-
 // Import Firebase modules
 import { app, auth } from "./firebase-config.js";
 import {
@@ -13,6 +12,8 @@ import {
   browserSessionPersistence,
   browserLocalPersistence
 } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+
 
 // Configuration
 const CONFIG = {
